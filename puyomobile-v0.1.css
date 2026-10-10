@@ -1,0 +1,411 @@
+/* PuyoMobile v0.1 — TEST ONLY. Existing PC CSS is unchanged. */
+
+/* All declarations are scoped to the verified mobile article ancestor. */
+
+#article-contents {
+  --puyomaru-text:#333333; --puyomaru-muted:#666666;
+  --puyomaru-border:#d7dee5; --puyomaru-border-strong:#9eb5c7;
+  --puyomaru-bg:#ffffff; --puyomaru-bg-soft:#f6f8fa;
+  --puyomaru-bg-accent:#eef6fb; --puyomaru-accent:#285b78;
+  --puyomaru-radius:10px;
+}
+
+#article-contents .puyomaru-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  margin: 4px 0 20px;
+  color: var(--puyomaru-muted);
+  font-size: 0.88em;
+  line-height: 1.6;
+}
+
+#article-contents .puyomaru-breadcrumb a,
+#article-contents .puyomaru-breadcrumb a:visited {
+  color: var(--puyomaru-accent);
+  text-decoration: none;
+}
+
+#article-contents .puyomaru-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+#article-contents .puyomaru-breadcrumb a:focus-visible {
+  outline: 2px solid var(--puyomaru-accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+#article-contents .puyomaru-breadcrumb-separator {
+  margin: 0 7px;
+  color: var(--puyomaru-border-strong);
+}
+
+#article-contents .puyomaru-breadcrumb-current {
+  color: var(--puyomaru-text);
+  font-weight: 600;
+}
+
+#article-contents .puyomaru-box {
+  box-sizing: border-box;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid var(--puyomaru-border);
+  border-radius: var(--puyomaru-radius);
+  background: var(--puyomaru-bg);
+}
+
+#article-contents .puyomaru-box--soft {
+  background: var(--puyomaru-bg-soft);
+}
+
+#article-contents .puyomaru-box--accent {
+  border-color: var(--puyomaru-border-strong);
+  background: var(--puyomaru-bg-accent);
+}
+
+#article-contents .puyomaru-box--dashed {
+  border-style: dashed;
+}
+
+#article-contents .puyomaru-box-title {
+  margin: 0 0 10px;
+  color: var(--puyomaru-accent);
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+#article-contents .puyomaru-box > :last-child {
+  margin-bottom: 0;
+}
+
+#article-contents .puyomaru-box--link-list {
+  padding: 15px 17px;
+}
+
+#article-contents .puyomaru-box--link-list h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+#article-contents .puyomaru-box--link-list p {
+  margin-bottom: 0.9em;
+}
+
+#article-contents .puyomaru-box--link-list ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+#article-contents .puyomaru-box--link-list li {
+  position: relative;
+  margin: 3px 0;
+  padding-left: 1.35em;
+}
+
+#article-contents .puyomaru-box--link-list li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--puyomaru-muted);
+  font-size: 0.82em;
+}
+
+#article-contents .puyomaru-box--link-list a,
+#article-contents .puyomaru-box--link-list a:visited {
+  color: var(--puyomaru-accent);
+  text-decoration: none;
+}
+
+#article-contents .puyomaru-box--link-list a:hover {
+  color: var(--puyomaru-accent);
+  text-decoration: underline;
+}
+
+#article-contents .puyomaru-box--link-list a:focus-visible {
+  outline: 2px solid var(--puyomaru-accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+#article-contents .puyomaru-box--link-list li ul {
+  margin-top: 4px;
+  padding-left: 0.7em;
+}
+
+#article-contents .puyomaru-link-group {
+  white-space: nowrap;
+}
+
+#article-contents .puyomaru-grid {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+#article-contents .puyomaru-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#article-contents .puyomaru-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#article-contents .puyomaru-grid--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#article-contents .puyomaru-grid > .puyomaru-box {
+  margin: 0;
+}
+
+#article-contents .puyomaru-scroll {
+  width: 100%;
+  margin: 20px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#article-contents .puyomaru-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+#article-contents .puyomaru-table th,
+#article-contents .puyomaru-table td {
+  padding: 10px 12px;
+  border: 1px solid var(--puyomaru-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+#article-contents .puyomaru-table th {
+  background: var(--puyomaru-bg-soft);
+  font-weight: bold;
+}
+
+#article-contents .puyomaru-table--center th,
+#article-contents .puyomaru-table--center td {
+  text-align: center;
+}
+
+#article-contents .puyomaru-table--nowrap th,
+#article-contents .puyomaru-table--nowrap td {
+  white-space: nowrap;
+}
+
+#article-contents .puyomaru-dialogue {
+  box-sizing: border-box;
+  margin: 28px 0;
+}
+
+#article-contents .puyomaru-talk {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 18px 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#article-contents .puyomaru-talk.puyomaru-talk--right {
+  flex-direction: row-reverse;
+}
+
+#article-contents .puyomaru-talk-avatar {
+  flex: 0 0 72px;
+  width: 72px;
+  min-width: 72px;
+  max-width: 72px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+#article-contents .puyomaru-talk-avatar img {
+  display: block;
+  width: 72px;
+  max-width: 72px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+#article-contents .puyomaru-talk-balloon {
+  position: relative;
+  flex: 0 1 auto;
+  max-width: min(80%, 720px);
+  min-width: 0;
+  padding: 14px 17px;
+  border: 2px solid #8da7ba;
+  border-radius: 14px;
+  background: #f7fafc;
+  line-height: 1.8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow-wrap: anywhere;
+  word-break: normal;
+  box-sizing: border-box;
+}
+
+#article-contents .puyomaru-talk-balloon > :first-child {
+  margin-top: 0;
+}
+
+#article-contents .puyomaru-talk-balloon > :last-child {
+  margin-bottom: 0;
+}
+
+#article-contents .puyomaru-talk-balloon p {
+  margin: 0.45em 0;
+}
+
+#article-contents .puyomaru-talk:not(.puyomaru-talk--right)
+.puyomaru-talk-balloon::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 12px solid #8da7ba;
+}
+
+#article-contents .puyomaru-talk:not(.puyomaru-talk--right)
+.puyomaru-talk-balloon::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: -9px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 10px solid #f7fafc;
+}
+
+#article-contents .puyomaru-talk.puyomaru-talk--right
+.puyomaru-talk-balloon {
+  border-color: #aebbc7;
+  background: #ffffff;
+}
+
+#article-contents .puyomaru-talk.puyomaru-talk--right
+.puyomaru-talk-balloon::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: -12px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 12px solid #aebbc7;
+}
+
+#article-contents .puyomaru-talk.puyomaru-talk--right
+.puyomaru-talk-balloon::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  right: -9px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #ffffff;
+}
+
+#article-contents .puyomaru-talk-balloon mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 0.22em;
+  padding-bottom: 0.22em;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 700px) {
+#article-contents .puyomaru-breadcrumb {
+    margin-bottom: 18px;
+    font-size: 0.82em;
+  }
+#article-contents .puyomaru-breadcrumb-separator {
+    margin: 0 5px;
+  }
+#article-contents .puyomaru-grid--2,
+#article-contents .puyomaru-grid--3 {
+    grid-template-columns: 1fr;
+  }
+#article-contents .puyomaru-grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+#article-contents .puyomaru-box {
+    padding: 16px;
+  }
+#article-contents .puyomaru-dialogue {
+    margin: 22px 0;
+  }
+#article-contents .puyomaru-talk {
+    gap: 8px;
+    margin: 15px 0;
+  }
+#article-contents .puyomaru-talk-avatar {
+    flex: 0 0 56px;
+    width: 56px;
+    min-width: 56px;
+    max-width: 56px;
+  }
+#article-contents .puyomaru-talk-avatar img {
+    width: 56px;
+    max-width: 56px;
+    height: auto;
+  }
+#article-contents .puyomaru-talk-balloon {
+    max-width: calc(100% - 64px);
+    padding: 11px 13px;
+    border-radius: 12px;
+    line-height: 1.75;
+  }
+#article-contents .puyomaru-talk:not(.puyomaru-talk--right)
+  .puyomaru-talk-balloon::before {
+    top: 13px;
+  }
+#article-contents .puyomaru-talk:not(.puyomaru-talk--right)
+  .puyomaru-talk-balloon::after {
+    top: 15px;
+  }
+#article-contents .puyomaru-talk.puyomaru-talk--right
+  .puyomaru-talk-balloon::before {
+    top: 13px;
+  }
+#article-contents .puyomaru-talk.puyomaru-talk--right
+  .puyomaru-talk-balloon::after {
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+#article-contents .puyomaru-box {
+    padding: 14px;
+  }
+}
